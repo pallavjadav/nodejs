@@ -1,0 +1,41 @@
+### Send post to node js 
+POST http://localhost:8080/addweight
+Content-Type: application/json
+
+
+{
+    "empName" : "juhi",
+    "empWeight" : "80"
+
+}
+
+### Get 
+GET http://localhost:8080/aboutus
+
+###delete by  name 
+DELETE http://localhost:8080/deletebyname
+Content-Type: application/json
+
+{
+    "empName" : "Sally"
+}
+
+###Create employee
+POST http://localhost:8080/addemployee
+Content-Type: application/json
+
+{
+    "empName":"Ruchit",
+    "empPass":"04021994"
+}
+
+
+###Update Employee
+PUT http://localhost:8080/updatedoc
+Content-Type: application/json
+
+{
+    "empName":"Juhi",
+    "empPass":"Juhi"
+
+}
