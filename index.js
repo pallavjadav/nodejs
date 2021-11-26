@@ -4,9 +4,9 @@ const routes = require('./routes/routes');
 const app = express();
 const router = express.Router();
 routes(router);
-//const port = process.env.PORT;
+const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use('/',router);
-//app.listen(port,()=>console.log("Listening on " +port));
+app.listen(port,()=>console.log("Listening on " +port));
