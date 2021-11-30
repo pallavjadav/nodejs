@@ -39,3 +39,14 @@ Content-Type: application/json
     "empPass":"Juhi"
 
 }
+
+### Login User
+POST http://localhost:8080/loginuser
+Content-Type: application/json
+
+
+{
+    "empName" : "Juhi",
+    "empPass" : "Juhi"
+
+}

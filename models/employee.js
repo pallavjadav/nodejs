@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const uri = 'mongodb+srv://sapbtpuser:0oLjjgGniuwz5K91@sapbtp-dev-cluster.fypxk.mongodb.net/Weights?retryWrites=true&w=majority';
-mongoose.connect( uri, {useNewUrlParser: true});
+mongoose.connect( uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const wSchema = new mongoose.Schema({
     empName: String,
