@@ -31,8 +31,8 @@ POST http://localhost:8080/addemployee
 Content-Type: application/json
 
 {
-    "empName":"piyush",
-    "empPass":"05101987"
+    "empName":"Param",
+    "empPass":"18092001"
 }
 
 
