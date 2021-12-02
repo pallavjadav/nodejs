@@ -25,8 +25,8 @@ async function main() {
     // const deleteResult = await collection.deleteMany({ a: 3 });
     // console.log('Deleted documents =>', deleteResult);
     // the following code examples can be pasted here...
-    const find = await collection.find({}).toArray();
-        console.log('Found Results', find );
+    // const find = await collection.find({}).toArray();
+    //     console.log('Found Results', find );
 
     //const update = await collection.updateOne({empName:"Juhi"},{$set:{empPass:"Juhi", empSurname:"Ekbote", empExperience:"4 Years"}});
 

@@ -1,9 +1,11 @@
 const Employee = require('../models/employee');
+const w = require('./winston_config'); 
 const path = require('path'); //what folder you are in (location)
 const jwt = require('jsonwebtoken');
 exports.getdefault = (req, res) => {
 
     res.sendFile(path.join(__dirname + './../HTML/index.html'));
+    //console.log(path.join(__dirname + './../HTML/index.html'));
 
 };
 
@@ -24,6 +26,22 @@ exports.getemployees = function (req, res) {
     Employee.find({}, function (err, results) {
         if (err) {
             res.end(err);
+        }
+        res.json(results);
+    });
+};
+
+exports.getemployee = function (req, res) {
+    // res.send('You are on the getemployees route.');
+    let empToFind = req.params.employeeName;
+    Employee.find({empName:empToFind}, function (err, results) {
+        if (err) {
+            //res.send(err);
+            w.log({
+                level: 'error',
+                message: err
+            });
+            res.status(503).send("Server Error!");
         }
         res.json(results);
     });
@@ -89,4 +107,8 @@ exports.loginuser = (req, res) => {
         }
     });
 
+};
+
+exports.pughome = (req,res)=>{
+    res.render('pughome');
 };

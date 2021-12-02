@@ -10,7 +10,13 @@ Content-Type: application/json
 }
 
 ### Get 
-GET http://localhost:8080/aboutus
+GET http://localhost:8080/getemployees
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBOYW1lIjoiSnVoaSIsImlhdCI6MTYzODQzNjkxNCwiZXhwIjoxNjM4NDQwNTE0fQ.Aq4af4g-DsmQuuRuUeg9j8vZUeLa6gzN_LKid5kkeQM
+
+
+
+
 
 ###delete by  name 
 DELETE http://localhost:8080/deletebyname
@@ -25,8 +31,8 @@ POST http://localhost:8080/addemployee
 Content-Type: application/json
 
 {
-    "empName":"Ruchit",
-    "empPass":"04021994"
+    "empName":"piyush",
+    "empPass":"05101987"
 }
 
 

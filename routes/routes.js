@@ -1,4 +1,5 @@
 const controller = require('../controllers/controller');
+const authUser = require('./../controllers/auth');
 module.exports = (router) => {
     // router.get('/', (request, response) => {
     //     response.send("<h1>Hello from Express + Nodemon</h1>")
@@ -13,10 +14,13 @@ module.exports = (router) => {
     router.post('/addweight', controller.addweight);
     router.get('/aboutus', controller.aboutus);
     router.get('/getemployees', controller.getemployees);
+    router.get('/getemployee/:employeeName', controller.getemployee);
     router.delete('/deletebyname',controller.deletebyname );
     router.post('/addemployee', controller.addemployee);
     router.put('/updatedoc', controller.updatedoc);
     router.post('/loginuser', controller.loginuser);
+    router.get('/pughome', controller.pughome);
+
     // router.get('/aboutus', (req, res) => {
     //     res.send("<h1>You're on the About US route</h1>");
     // });
